@@ -96,3 +96,45 @@ body {
     height: 460px;
     transform: translate(-60%,-30%);
   }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #398cd4;
+  }
+  
+  #welcome-screen {
+    text-align: center;
+  }
+  
+  #company-name {
+    font-size: 50px;
+    color: #321f66;
+    text-shadow: 2px 2px #ccc;
+    animation: fade-in 2s forwards;
+  }
+  
+  #creator-name {
+    font-size: 20px;
+    color: #321f66;
+    margin-top: 20px;
+    animation: fade-in 2s 0.5s forwards;
+  }
+  
+  #copyright-info {
+    font-size: 14px;
+    margin-top: 20px;
+    animation: fade-in 2s 1s forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
