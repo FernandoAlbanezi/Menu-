@@ -1,46 +1,77 @@
 body {
-    background-color: #321f66;
-  }
-  .travel-tab {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #398cd4;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .package {
-    width: 300px;
-    height: 400px;
-    background-color: #321f66;
-    color: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .package img {
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-  }
-  .package h2 {
-    margin-top: 0;
-  }
-  .package button {
-    background-color: #398cd4;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .package button:hover {
-    background-color: #2f1a5a;
-  }
+  background-color: #321f66;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.travel-tab {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #398cd4;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% { transform: translateY(50px); }
+  100% { transform: translateY(0); }
+}
+
+.package {
+  width: 300px;
+  height: 400px;
+  background-color: #321f66;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.package:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.package img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.package img:hover {
+  transform: scale(1.05);
+}
+
+.package h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.package button {
+  background-color: #398cd4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.package button:hover {
+  background-color: #2f1a5a;
+}
